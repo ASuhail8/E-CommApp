@@ -17,7 +17,9 @@ pipeline {
             }
         }
         post{
+            always {
             archiveArtifacts artifacts: 'reports/index.html', followSymlinks: false
+            }
         }
     }
 }
