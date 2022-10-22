@@ -1,19 +1,19 @@
 pipeline{
     agent any
     stages{
-        stage('Run errorHandling tests'){
-            steps{
-                sh 'mvn test -PerrorHandling'
-            }
-        }
         stage('Run regression tests'){
             steps{
                 sh 'mvn test -Pregression'
             }
         }
-        stage('Run purchase tests'){
+       stage('Run Regression Tests'){
             steps{
-                sh 'mvn test -Ppurchase'
+                sh 'mvn test -Pregression'
+            }
+            post{
+                always{
+                   archiveArtifacts artifacts: 'reports/index.html', followSymlinks: false 
+                }
             }
         }
     }
