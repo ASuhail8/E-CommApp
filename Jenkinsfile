@@ -15,11 +15,18 @@ pipeline {
             steps {
                 sh "mvn test -Ppurchase"
             }
+
+            post{
+            always {
+            archiveArtifacts artifacts: 'reports/index.html', followSymlinks: false
+            }
         }
-        post{
+        } 
+         post{
             always {
             archiveArtifacts artifacts: 'reports/index.html', followSymlinks: false
             }
         }
     }
+   
 }
