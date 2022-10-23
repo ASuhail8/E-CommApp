@@ -35,21 +35,22 @@ public class BaseTest {
 
         String browser = System.getProperty("browser") != null ? System.getProperty("browser") : getProperty("browser");
 
-        ChromeOptions options = new ChromeOptions();
+         ChromeOptions options = new ChromeOptions();
         if (browser.contains("chrome")) {
             WebDriverManager.chromedriver().setup();
             if (browser.contains("headless")) {
                 options.addArguments("headless");
             }
             driver = new ChromeDriver(options);
+            driver.manage().window().setSize(new Dimension(1440, 900));
 
         } else if (browser.equals("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
-        } else {
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
         }
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        return driver;
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         return driver;
