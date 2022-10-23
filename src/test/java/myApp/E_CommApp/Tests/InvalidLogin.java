@@ -15,7 +15,7 @@ public class InvalidLogin extends BaseTest {
 
         landingPage.loginToApplication("abdullasuhail@gmail.com", "Suhail"); // wrong password
         String errorMsg = landingPage.verifyErrorMsg();
-        Assert.assertEquals(errorMsg, "Incorrect email password.");
+        Assert.assertEquals(errorMsg, "Incorrect email or password.");
 
     }
 
