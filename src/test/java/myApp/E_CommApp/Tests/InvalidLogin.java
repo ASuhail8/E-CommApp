@@ -6,11 +6,10 @@ import org.testng.annotations.Test;
 import myApp.E_CommApp.Pages.CartPage;
 import myApp.E_CommApp.Pages.ProductsPage;
 import myApp.E_CommApp.TestComponents.BaseTest;
-import myApp.E_CommApp.TestComponents.Retry;
 
 public class InvalidLogin extends BaseTest {
 
-    @Test(groups = "errorhandling", retryAnalyzer = Retry.class)
+    @Test(groups = "errorhandling")
     public void invalidLoginTest() {
 
         landingPage.loginToApplication("abdullasuhail@gmail.com", "Suhail"); // wrong password
@@ -19,7 +18,7 @@ public class InvalidLogin extends BaseTest {
 
     }
 
-    @Test(retryAnalyzer = Retry.class)
+    @Test()
     public void errorValidationOnProductsTest() {
 
         String productName = "ADIDAS ORIGINAL";
