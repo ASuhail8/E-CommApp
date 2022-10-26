@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="myApp.E_CommApp.Tests.InvalidLogin">
+      <class name="resources.ExcelDataUtils">
         <methods>
-          <include name="tearDown"/>
-          <include name="invalidLoginTest"/>
-          <include name="launchApplication"/>
-          <include name="errorValidationOnProductsTest"/>
+          <include name="getData"/>
         </methods>
-      </class> <!-- myApp.E_CommApp.Tests.InvalidLogin -->
+      </class> <!-- resources.ExcelDataUtils -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -16,7 +16,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -36,7 +35,7 @@ public class BaseTest {
 
         String browser = System.getProperty("browser") != null ? System.getProperty("browser") : getProperty("browser");
 
-         ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         if (browser.contains("chrome")) {
             WebDriverManager.chromedriver().setup();
             if (browser.contains("headless")) {
