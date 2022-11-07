@@ -1,46 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-26T22:30:52 IST" name="Default suite" finished-at="2022-10-26T22:30:53 IST" duration-ms="1073">
+  <suite started-at="2022-10-28T20:49:42 IST" name="Suite" finished-at="2022-10-28T20:50:01 IST" duration-ms="18709">
     <groups>
+      <group name="errorhandling">
+        <method signature="InvalidLogin.invalidLoginTest()[pri:0, instance:myApp.E_CommApp.Tests.InvalidLogin@79517588]" name="invalidLoginTest" class="myApp.E_CommApp.Tests.InvalidLogin"/>
+      </group> <!-- errorhandling -->
     </groups>
-    <test started-at="2022-10-26T22:30:52 IST" name="Default test" finished-at="2022-10-26T22:30:53 IST" duration-ms="1073">
-      <class name="resources.ExcelDataUtils">
-        <test-method signature="getData(java.util.List)[pri:0, instance:resources.ExcelDataUtils@537f60bf]" started-at="2022-10-26T22:30:53 IST" name="getData" data-provider="dataProv" finished-at="2022-10-26T22:30:53 IST" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[reg1, reg2, reg3]]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2022-10-28T20:49:42 IST" name="FunctionalTests" finished-at="2022-10-28T20:49:42 IST" duration-ms="28">
+    </test> <!-- FunctionalTests -->
+    <test started-at="2022-10-28T20:49:42 IST" name="ErrorValidationTests" finished-at="2022-10-28T20:50:01 IST" duration-ms="18709">
+      <class name="myApp.E_CommApp.Tests.InvalidLogin">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:myApp.E_CommApp.Tests.InvalidLogin@79517588]" started-at="2022-10-28T20:49:42 IST" name="launchApplication" finished-at="2022-10-28T20:49:59 IST" duration-ms="17211" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-        <test-method signature="getData(java.util.List)[pri:0, instance:resources.ExcelDataUtils@537f60bf]" started-at="2022-10-26T22:30:53 IST" name="getData" data-provider="dataProv" finished-at="2022-10-26T22:30:53 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[pur1, pur2, pur3]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="invalidLoginTest()[pri:0, instance:myApp.E_CommApp.Tests.InvalidLogin@79517588]" started-at="2022-10-28T20:49:59 IST" name="invalidLoginTest" finished-at="2022-10-28T20:50:00 IST" duration-ms="1294" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-        <test-method signature="getData(java.util.List)[pri:0, instance:resources.ExcelDataUtils@537f60bf]" started-at="2022-10-26T22:30:53 IST" name="getData" data-provider="dataProv" finished-at="2022-10-26T22:30:53 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[err1, err2, err3]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- invalidLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:myApp.E_CommApp.Tests.InvalidLogin@79517588]" started-at="2022-10-28T20:50:00 IST" name="tearDown" finished-at="2022-10-28T20:50:01 IST" duration-ms="114" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-      </class> <!-- resources.ExcelDataUtils -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- myApp.E_CommApp.Tests.InvalidLogin -->
+    </test> <!-- ErrorValidationTests -->
+  </suite> <!-- Suite -->
 </testng-results>
