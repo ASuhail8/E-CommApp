@@ -6,9 +6,9 @@ pipeline{
                 sh 'mvn test -Pregression'
             }
         }
-       stage('Run Regression Tests'){
+       stage('Run error validation Tests'){
             steps{
-                sh 'mvn test -Pregression'
+                sh 'mvn test -PerrorHandling'
             }
             post{
                 always{
