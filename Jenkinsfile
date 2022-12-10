@@ -1,5 +1,7 @@
 pipeline{
-    agent any
+    agent {
+        docker {image 'asuhail8/ecomm'}
+    }
     stages{
         stage('Run regression tests'){
             steps{
