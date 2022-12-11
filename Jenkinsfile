@@ -2,6 +2,12 @@ pipeline{
     agent {
         docker {image 'asuhail8/ecomm'}
     }
+    environment {
+      // moving the cache to the workspace might speed up
+      // the build stage.  maybe use ${env.WORKSPACE}/.build_cache?
+      //GOCACHE = "/tmp" - saves the build cache in temp folder which gets deleted
+      GOCAHCE = "${env.WORKSPACE}/.build_cache"
+    }
     stages{
         stage('Run regression tests'){
             steps{
