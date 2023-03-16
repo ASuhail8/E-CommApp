@@ -36,6 +36,7 @@ public class BaseTest {
         String browser = System.getProperty("browser") != null ? System.getProperty("browser") : getProperty("browser");
 
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
         if (browser.contains("chrome")) {
             WebDriverManager.chromedriver().setup();
             if (browser.contains("headless")) {
