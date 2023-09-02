@@ -4,21 +4,16 @@
   <listeners>
     <listener class-name="myApp.E_CommApp.TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="FunctionalTests(failed)">
-    <groups>
-      <run>
-        <include name="purchase"/>
-      </run>
-    </groups>
+  <test thread-count="5" parallel="tests" name="ErrorValidationTests(failed)">
     <classes>
-      <class name="myApp.E_CommApp.Tests.AddProductToCart">
+      <class name="myApp.E_CommApp.Tests.InvalidLogin">
         <methods>
-          <include name="addProductToCartTest"/>
           <include name="tearDown"/>
-          <include name="orderHistoryTest" invocation-numbers="0"/>
+          <include name="invalidLoginTest"/>
           <include name="launchApplication"/>
+          <include name="errorValidationOnProductsTest"/>
         </methods>
-      </class> <!-- myApp.E_CommApp.Tests.AddProductToCart -->
+      </class> <!-- myApp.E_CommApp.Tests.InvalidLogin -->
     </classes>
-  </test> <!-- FunctionalTests(failed) -->
+  </test> <!-- ErrorValidationTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

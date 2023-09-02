@@ -72,7 +72,7 @@ public class BaseTest {
     public static String getProperty(String key) throws IOException {
         Properties prop = new Properties();
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
-                + "/src/test/java/myApp/E_CommApp/TestComponents/global.properties");
+                + "/src/test/resources/global.properties");
         prop.load(fis);
         return prop.getProperty(key);
 

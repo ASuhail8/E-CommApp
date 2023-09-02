@@ -39,7 +39,7 @@ HEALTHCHECK CMD java -version;google-chrome --version || exit 1
 #ADD .jar under target from host(local) into this image
 #ADD target/SeleniumFramework-0.0.1-SNAPSHOT.jar                          SeleniumFramework-0.0.1-SNAPSHOT.jar
 ADD target/E-CommApp-0.0.1-SNAPSHOT-tests.jar                            E-CommApp-0.0.1-SNAPSHOT-tests.jar
-ADD src/test/resources                                                  src/test/resources
+ADD src/test/resources                                                   src/test/resources
 
 # ADD testng suite files
 ADD testng.xml                                                   testng.xml
