@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -20,9 +21,9 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
@@ -49,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>errorHandling.xml</span>
+                    <span>purchase.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,10 +103,34 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="myApp.E_CommApp.Tests.InvalidLogin" class="method navigator-link" hash-for-method="invalidLoginTest">invalidLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="myApp.E_CommApp.Tests.AddProductToCart" class="method navigator-link" hash-for-method="orderHistoryTest({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com})">orderHistoryTest({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="myApp.E_CommApp.Tests.AddProductToCart" class="method navigator-link" hash-for-method="addProductToCartTest({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com})">addProductToCartTest({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="myApp.E_CommApp.Tests.AddProductToCart" class="method navigator-link" hash-for-method="addProductToCartTest({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com})">addProductToCartTest({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="myApp.E_CommApp.Tests.AddProductToCart" class="method navigator-link" hash-for-method="orderHistoryTest({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com})">orderHistoryTest({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -120,44 +145,92 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">myApp.E_CommApp.Tests.InvalidLogin</span>
+              <span class="class-name">myApp.E_CommApp.Tests.AddProductToCart</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="invalidLoginTest">
-                  </a> <!-- invalidLoginTest -->
-                  <span class="method-name">invalidLoginTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Incorrect email password.] but found [Incorrect email or password.]
-	at myApp.E_CommApp.Tests.InvalidLogin.invalidLoginTest(InvalidLogin.java:18)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 22 stack frames
+                  <a name="orderHistoryTest({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com})">
+                  </a> <!-- orderHistoryTest({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com}) -->
+                  <span class="method-name">orderHistoryTest</span>
+                  <span class="parameters">({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class,&apos;col-lg-4&apos;)] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.5.1&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qt/bc_h7wcj2ks...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55499}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55499/devtoo..., se:cdpVersion: 116.0.5845.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8767212c93173e529c640feabef55e62
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at myApp.E_CommApp.abstractcomponenets.AbstractComponent.waitForTheElementToAppear(AbstractComponent.java:37)
+	at myApp.E_CommApp.Pages.ProductsPage.waitForProductsToLoad(ProductsPage.java:34)
+	at myApp.E_CommApp.Tests.AddProductToCart.orderHistoryTest(AddProductToCart.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 15 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">myApp.E_CommApp.Tests.AddProductToCart</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addProductToCartTest({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com})">
+                  </a> <!-- addProductToCartTest({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com}) -->
+                  <span class="method-name">addProductToCartTest</span>
+                  <span class="parameters">({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addProductToCartTest({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com})">
+                  </a> <!-- addProductToCartTest({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com}) -->
+                  <span class="method-name">addProductToCartTest</span>
+                  <span class="parameters">({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="orderHistoryTest({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com})">
+                  </a> <!-- orderHistoryTest({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com}) -->
+                  <span class="method-name">orderHistoryTest</span>
+                  <span class="parameters">({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/abdullasuhail/eclipse-workspace2/E-CommApp/errorHandling.xml</span>
+            <span class="header-content">/Users/abdullasuhail/Desktop/Work/Java Projects/ecomm-app/E-CommApp/purchase.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;purchase&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;purchase&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;myApp.E_CommApp.TestComponents.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;groups&gt;
-    &lt;run&gt;
-      &lt;include name=&quot;errorhandling&quot;/&gt;
-    &lt;/run&gt;
-  &lt;/groups&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;FunctionalTests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;myApp.E_CommApp.Tests.AddProductToCart&quot;/&gt;
@@ -193,10 +266,14 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">errorhandling</span>
+              <span class="test-group-name">purchase</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">invalidLoginTest</span>
+                <span class="method-in-group-name">addProductToCartTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">orderHistoryTest</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -216,16 +293,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'invalidLoginTest')
-data.setCell(0, 2, 'myApp.E_CommApp.Tests.InvalidLogin')
-data.setCell(0, 3, 1168);
+data.setCell(0, 1, 'orderHistoryTest')
+data.setCell(0, 2, 'myApp.E_CommApp.Tests.AddProductToCart')
+data.setCell(0, 3, 5199);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'addProductToCartTest')
+data.setCell(1, 2, 'myApp.E_CommApp.Tests.AddProductToCart')
+data.setCell(1, 3, 4292);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addProductToCartTest')
+data.setCell(2, 2, 'myApp.E_CommApp.Tests.AddProductToCart')
+data.setCell(2, 3, 4222);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'orderHistoryTest')
+data.setCell(3, 2, 'myApp.E_CommApp.Tests.AddProductToCart')
+data.setCell(3, 3, 502);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -240,7 +329,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -248,14 +337,7 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">errorValidationOnProductsTest</span>
                 <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">myApp.E_CommApp.Tests.AddProductToCart</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">addProductToCartTest</span>
-                <br/>
-                <span class="ignored-method-name">orderHistoryTest</span>
+                <span class="ignored-method-name">invalidLoginTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -267,24 +349,61 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">myApp.E_CommApp.Tests.InvalidLogin</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">myApp.E_CommApp.Tests.AddProductToCart</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">invalidLoginTest</span>
-                <span class="method-start">6121 ms</span>
+                <span class="method-name">addProductToCartTest({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com})</span>
+                <span class="method-start">2677 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7713 ms</span>
+                <span class="method-start">6972 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">7086 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">addProductToCartTest({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com})</span>
+                <span class="method-start">8751 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">12973 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">13101 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">orderHistoryTest({password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com})</span>
+                <span class="method-start">14791 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">20566 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">20678 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">orderHistoryTest({password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com})</span>
+                <span class="method-start">22556 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">23059 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

@@ -2,13 +2,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests">
 	<listeners>
-		<listener class-name="myApp.E_CommApp.TestComponents.Listeners"></listener>
+		<listener class-name="myApp.E_CommApp.TestComponents.Listeners"/>
 	</listeners>
-	<test thread-count="5" name="FunctionalTests">
-		<classes>
-			<class name="myApp.E_CommApp.Tests.AddProductToCart" />
-		</classes>
-	</test> <!-- Test -->
+<!--	<test thread-count="5" name="FunctionalTests">-->
+<!--		<classes>-->
+<!--			<class name="myApp.E_CommApp.Tests.AddProductToCart" />-->
+<!--		</classes>-->
+<!--	</test> &lt;!&ndash; Test &ndash;&gt;-->
 
 	<test thread-count="5" name="ErrorValidationTests">
 		<classes>

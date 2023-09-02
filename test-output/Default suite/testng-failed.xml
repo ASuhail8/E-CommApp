@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="resources.ExcelDataUtils">
+      <class name="myApp.E_CommApp.Tests.AddProductToCart">
         <methods>
-          <include name="getData"/>
+          <include name="addProductToCartTest"/>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
         </methods>
-      </class> <!-- resources.ExcelDataUtils -->
+      </class> <!-- myApp.E_CommApp.Tests.AddProductToCart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

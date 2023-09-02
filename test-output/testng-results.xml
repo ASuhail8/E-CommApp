@@ -1,46 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-26T22:30:52 IST" name="Default suite" finished-at="2022-10-26T22:30:53 IST" duration-ms="1073">
+  <suite started-at="2023-09-01T20:50:01 IST" name="Suite" finished-at="2023-09-01T20:50:24 IST" duration-ms="23252">
     <groups>
+      <group name="purchase">
+        <method signature="AddProductToCart.addProductToCartTest(java.util.HashMap)[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" name="addProductToCartTest" class="myApp.E_CommApp.Tests.AddProductToCart"/>
+        <method signature="AddProductToCart.orderHistoryTest(java.util.HashMap)[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" name="orderHistoryTest" class="myApp.E_CommApp.Tests.AddProductToCart"/>
+      </group> <!-- purchase -->
     </groups>
-    <test started-at="2022-10-26T22:30:52 IST" name="Default test" finished-at="2022-10-26T22:30:53 IST" duration-ms="1073">
-      <class name="resources.ExcelDataUtils">
-        <test-method signature="getData(java.util.List)[pri:0, instance:resources.ExcelDataUtils@537f60bf]" started-at="2022-10-26T22:30:53 IST" name="getData" data-provider="dataProv" finished-at="2022-10-26T22:30:53 IST" duration-ms="9" status="PASS">
+    <test started-at="2023-09-01T20:50:01 IST" name="ErrorValidationTests" finished-at="2023-09-01T20:50:01 IST" duration-ms="4">
+    </test> <!-- ErrorValidationTests -->
+    <test started-at="2023-09-01T20:50:01 IST" name="FunctionalTests" finished-at="2023-09-01T20:50:24 IST" duration-ms="23252">
+      <class name="myApp.E_CommApp.Tests.AddProductToCart">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:01 IST" name="launchApplication" finished-at="2023-09-01T20:50:04 IST" duration-ms="2677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="addProductToCartTest(java.util.HashMap)[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:04 IST" name="addProductToCartTest" data-provider="getData" finished-at="2023-09-01T20:50:08 IST" duration-ms="4292" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[reg1, reg2, reg3]]]>
+                <![CDATA[{password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-        <test-method signature="getData(java.util.List)[pri:0, instance:resources.ExcelDataUtils@537f60bf]" started-at="2022-10-26T22:30:53 IST" name="getData" data-provider="dataProv" finished-at="2022-10-26T22:30:53 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- addProductToCartTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:08 IST" name="tearDown" finished-at="2023-09-01T20:50:08 IST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:08 IST" name="launchApplication" finished-at="2023-09-01T20:50:10 IST" duration-ms="1665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="addProductToCartTest(java.util.HashMap)[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:10 IST" name="addProductToCartTest" data-provider="getData" finished-at="2023-09-01T20:50:14 IST" duration-ms="4222" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[pur1, pur2, pur3]]]>
+                <![CDATA[{password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-        <test-method signature="getData(java.util.List)[pri:0, instance:resources.ExcelDataUtils@537f60bf]" started-at="2022-10-26T22:30:53 IST" name="getData" data-provider="dataProv" finished-at="2022-10-26T22:30:53 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- addProductToCartTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:14 IST" name="tearDown" finished-at="2023-09-01T20:50:14 IST" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:14 IST" name="launchApplication" finished-at="2023-09-01T20:50:16 IST" duration-ms="1690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:16 IST" name="orderHistoryTest" data-provider="getData" finished-at="2023-09-01T20:50:21 IST" depends-on-methods="myApp.E_CommApp.Tests.AddProductToCart.addProductToCartTest" duration-ms="5199" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[err1, err2, err3]]]>
+                <![CDATA[{password=Suhail@1, product=ZARA COAT 3, email=abdullasuhail21@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class,'col-lg-4')] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.5.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qt/bc_h7wcj2ks...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55499}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55499/devtoo..., se:cdpVersion: 116.0.5845.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8767212c93173e529c640feabef55e62]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class,'col-lg-4')] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.5.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/qt/bc_h7wcj2ks...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55499}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55499/devtoo..., se:cdpVersion: 116.0.5845.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8767212c93173e529c640feabef55e62
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at myApp.E_CommApp.abstractcomponenets.AbstractComponent.waitForTheElementToAppear(AbstractComponent.java:37)
+at myApp.E_CommApp.Pages.ProductsPage.waitForProductsToLoad(ProductsPage.java:34)
+at myApp.E_CommApp.Tests.AddProductToCart.orderHistoryTest(AddProductToCart.java:47)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:22 IST" name="tearDown" finished-at="2023-09-01T20:50:22 IST" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:22 IST" name="launchApplication" finished-at="2023-09-01T20:50:24 IST" duration-ms="1878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:24 IST" name="orderHistoryTest" data-provider="getData" finished-at="2023-09-01T20:50:24 IST" depends-on-methods="myApp.E_CommApp.Tests.AddProductToCart.addProductToCartTest" duration-ms="502" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Suhail@1, product=ADIDAS ORIGINAL, email=abdullasuhail21@gmail.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getData -->
-      </class> <!-- resources.ExcelDataUtils -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- orderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:myApp.E_CommApp.Tests.AddProductToCart@6c130c45]" started-at="2023-09-01T20:50:24 IST" name="tearDown" finished-at="2023-09-01T20:50:24 IST" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- myApp.E_CommApp.Tests.AddProductToCart -->
+    </test> <!-- FunctionalTests -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -21,12 +21,12 @@ public class AddProductToCart extends BaseTest {
     // String productName = "ADIDAS ORIGINAL";
 
     @Test(dataProvider = "getData", groups = "purchase", retryAnalyzer = Retry.class)
-    public void addProductToCartTest(HashMap<String, String> map) {
-
+    public void addProductToCartTest(HashMap<String, String> map) throws InterruptedException {
         ProductsPage productsPage = landingPage.loginToApplication(map.get("email"), map.get("password"))
                 .waitForProductsToLoad();
 
         productsPage = productsPage.addProductToCart(map.get("product"));
+        Thread.sleep(3000);
         CartPage cartPage = productsPage.clickOnCart();
         boolean flag = cartPage.verifyItemsInCart(map.get("product"));
         AssertJUnit.assertTrue(flag);
@@ -81,7 +81,6 @@ public class AddProductToCart extends BaseTest {
          */
 
         List<HashMap<String, String>> data = readJsonData();
-
         return new Object[][] { { data.get(0) }, { data.get(1) } };
     }
 

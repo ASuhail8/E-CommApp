@@ -17,7 +17,7 @@ public class AbstractComponent {
 
     WebDriver driver;
 
-    @FindBy(css = "[routerlink*='cart']")
+    @FindBy(xpath = "//button[@routerlink='/dashboard/cart']")
     WebElement cart;
 
     @FindBy(css = "[routerlink*='orders']")
@@ -48,6 +48,7 @@ public class AbstractComponent {
     }
 
     public CartPage clickOnCart() {
+        waitForTheElementToAppear(cart);
         cart.click();
         return new CartPage(driver);
     }

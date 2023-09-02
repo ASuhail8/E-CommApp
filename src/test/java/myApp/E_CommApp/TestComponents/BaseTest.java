@@ -10,19 +10,18 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import myApp.E_CommApp.Pages.LandingPage;
 
 public class BaseTest {
@@ -36,18 +35,13 @@ public class BaseTest {
         String browser = System.getProperty("browser") != null ? System.getProperty("browser") : getProperty("browser");
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
+        EdgeOptions edgeOptions = new EdgeOptions();
         if (browser.contains("chrome")) {
-            WebDriverManager.chromedriver().setup();
-            if (browser.contains("headless")) {
-                options.addArguments("headless");
-            }
+            //options.addArguments("headless");
             driver = new ChromeDriver(options);
-            driver.manage().window().setSize(new Dimension(1440, 900));
-
-        } else if (browser.equals("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
+        } else if (browser.equals("edge")) {
+            //edgeOptions.addArguments("headless");
+            driver = new EdgeDriver(edgeOptions);
         }
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -80,7 +74,7 @@ public class BaseTest {
     public List<HashMap<String, String>> readJsonData() throws IOException {
 
         String jsonContent = FileUtils
-                .readFileToString(new File(System.getProperty("user.dir") + "/src/test/java/resources/purchase.json"),
+                .readFileToString(new File(System.getProperty("user.dir") + "/src/test/resources/purchase.json"),
                         StandardCharsets.UTF_8);
         ObjectMapper objMapper = new ObjectMapper();
         List<HashMap<String, String>> data = objMapper.readValue(jsonContent,
