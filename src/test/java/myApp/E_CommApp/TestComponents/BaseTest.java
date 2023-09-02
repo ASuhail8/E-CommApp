@@ -34,11 +34,18 @@ public class BaseTest {
 
         String browser = System.getProperty("browser") != null ? System.getProperty("browser") : getProperty("browser");
 
-        ChromeOptions options = new ChromeOptions();
+        ChromeOptions chromeOptions = new ChromeOptions();
         EdgeOptions edgeOptions = new EdgeOptions();
         if (browser.contains("chrome")) {
             //options.addArguments("headless");
-            driver = new ChromeDriver(options);
+            chromeOptions.addArguments("--disable-extensions");
+            chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("--disable-gpu");
+            chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.addArguments("--incognito");
+            chromeOptions.addArguments("--disable-application-cache");
+            chromeOptions.addArguments("--disable-dev-shm-usage");
+            driver = new ChromeDriver(chromeOptions);
         } else if (browser.equals("edge")) {
             //edgeOptions.addArguments("headless");
             driver = new EdgeDriver(edgeOptions);
